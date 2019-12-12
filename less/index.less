@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -57,3 +57,120 @@ html, body {
     height: 100%;
 }
 
+@general-padding: 10px;
+@mobile: ~"(max-width: 500px)";
+@font-color: black;
+@font-family: 'roboto', sans-serif;
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  color: @font-color;
+  font-family: @font-family;
+
+  h1 {
+    font-size: 3rem;
+    @media @mobile {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    @media @mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  header {
+    .flex-row();
+    justify-content: flex-end;
+    padding: @general-padding;
+
+    nav {
+      width: 30%;
+      .flex-row();
+      justify-content: space-between;
+      font-size: 1.5rem;
+
+      a {
+      text-decoration: none;
+      }
+      @media @mobile {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  section {
+    .flex-column();
+    padding: @general-padding;
+
+    p {
+      padding: @general-padding;
+      font-size: 1.5rem;
+      @media @mobile {
+        font-size: 1rem;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin: @general-padding 0;
+      text-align: left;
+
+      tr {
+        border-bottom: 1px solid black;
+
+        &:first-child {
+          border-top: 1px solid black;
+        }
+
+        &:nth-child(even) {
+          background-color: lightgrey;
+        }
+      }
+
+      th {
+        font-weight: bold;
+      }
+
+      th, td {
+        padding: @general-padding;
+        font-size: 1.5rem;
+        @media @mobile {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: @general-padding;
+    p {
+      font-size: 1.5rem;
+      padding: @general-padding;
+      @media @mobile {
+        font-size: 1rem;
+      }
+    }
+  }
+}

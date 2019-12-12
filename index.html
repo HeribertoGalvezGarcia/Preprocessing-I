@@ -7,6 +7,7 @@
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +15,68 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="#intro">Intro</a>
+        <a href="#skills">Skills</a>
+        <a href="#history">Work History</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section id="intro">
+      <h1>Heriberto Galvez Garcia</h1>
+      <p>I am a software engineer with a few years of experience.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <table>
+        <tr>
+          <th>Skill</th>
+          <th>Years of Experience</th>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td>2 Years</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>3 Years</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>5 Years</td>
+        </tr>
+        <tr>
+          <td>HTML/CSS</td>
+          <td>5 Years</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="history">
+      <h2>Work History</h2>
+      <table>
+        <tr>
+          <th>Company</th>
+          <th>Position</th>
+          <th>Started</th>
+          <th>Ended</th>
+        </tr>
+        <tr>
+          <td>Arriba Mexican Grill</td>
+          <td>Dish Machine Operator</td>
+          <td>June 2019</td>
+          <td>Present</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer id="contact">
+      <h2>Contact</h2>
+      <p>Email: heriberto.galvezgarcia@gmail.com</p>
+    </footer>
+  </div>
 </body>
 </html>
